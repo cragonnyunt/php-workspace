@@ -22,6 +22,16 @@ RUN add-apt-repository -y ppa:ondrej/php && \
 
 RUN pecl channel-update pecl.php.net
 
+RUN usermod -aG devuser www-data
+
+COPY www.conf /etc/php/8.0/fpm/pool.d/www.conf
+
+RUN mkdir /etc/service/php-fpm && mkdir -p /run/php
+
+COPY run.sh /etc/service/php-fpm/run
+
+RUN chmod +x /etc/service/php-fpm/run
+
 USER devuser
 
 RUN echo "" >> ~/.zshrc && \
@@ -37,3 +47,5 @@ COPY composer.json /home/devuser/.config/composer/composer.json
 RUN ~/composer global install
 
 USER root
+
+EXPOSE 9000
