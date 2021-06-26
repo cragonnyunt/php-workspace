@@ -24,10 +24,10 @@ docker run --rm -it \
     cragonnyunt/php-workspace-docker:<<tag>>
 ```
 
-## php-workspace-docker:<version>-fpm
+## php-workspace-docker:< version >-fpm
 
 This version contains PHP-FPM, FastCGI processor for the use with external nginx, apache reverse proxy.
 
-## php-workspace-docker:<version>-apache
+## php-workspace-docker:< version >-apache
 
 This version contains apache by default. Your website's `index.php` will need to be in `/workspace/public/index.php` for default config.
