@@ -5,23 +5,23 @@ RUN add-apt-repository -y ppa:ondrej/php && \
     apt-get install -y \
     apache2 \
     libapache2-mod-fcgid \
-    libapache2-mod-php8.0 \
-    php8.0 \
-    php8.0-bcmath \
-    php8.0-cli \
-    php8.0-common \
-    php8.0-curl \
-    php8.0-dev \
-    php8.0-fpm \
-    php8.0-gd \
-    php8.0-mbstring \
-    php8.0-memcached \
-    php8.0-mysql \
-    php8.0-pgsql \
-    php8.0-sqlite3 \
-    php8.0-zip \
-    php8.0-xdebug \
-    php8.0-xml
+    libapache2-mod-php7.4 \
+    php7.4 \
+    php7.4-bcmath \
+    php7.4-cli \
+    php7.4-common \
+    php7.4-curl \
+    php7.4-dev \
+    php7.4-fpm \
+    php7.4-gd \
+    php7.4-mbstring \
+    php7.4-memcached \
+    php7.4-mysql \
+    php7.4-pgsql \
+    php7.4-sqlite3 \
+    php7.4-zip \
+    php7.4-xdebug \
+    php7.4-xml
 
 RUN pecl channel-update pecl.php.net
 
