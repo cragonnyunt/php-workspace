@@ -1,2 +1,2 @@
 #!/bin/sh
-php-fpm8.0 -F -R
+php-fpm7.4 -F -R
