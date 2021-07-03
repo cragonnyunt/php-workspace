@@ -32,6 +32,10 @@ RUN usermod -aG devuser www-data
 RUN a2enmod proxy proxy_html proxy_http ssl http2 rewrite headers && \
     service apache2 restart
 
+COPY composer.json /home/devuser/.config/composer/composer.json
+
+RUN chown -R devuser:devuser /home/devuser/.config/composer
+
 USER devuser
 
 RUN echo "" >> ~/.zshrc && \
@@ -41,8 +45,6 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&
     php composer-setup.php && \
     php -r "unlink('composer-setup.php');" && \
     mv composer.phar ~/composer
-
-COPY composer.json /home/devuser/.config/composer/composer.json
 
 RUN ~/composer global install
 
