@@ -1,12 +1,4 @@
 {
     "require": {
-        "fakerphp/faker": "*",
-        "mockery/mockery": "*",
-        "guzzlehttp/guzzle": "*",
-        "phpunit/phpunit": "*",
-        "monolog/monolog": "*",
-        "predis/predis": "*",
-        "laravel/tinker": "*",
-        "squizlabs/php_codesniffer": "*"
     }
 }
